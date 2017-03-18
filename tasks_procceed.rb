@@ -12,12 +12,22 @@ end
 
 def load_tasks(file_name)
   if File.file?(file_name)
-    File.read(file_name)
-  #  p [Hash[*f.split(/,|\n/)]]
-  #  hash = {id: "", name: "", done: "" }
-  # Hash[File.read(file_name).split(",").map{|i| i.split("\n")}]
+    #array of paragraph
+    i = 0
+    paragraphs = Array.new
+    split_contents = Array.new
+    hashes = {}
+    contents = []
+    File.foreach(file_name, "\n") do |paragraph|
+      contents << paragraph.chomp
+      split_contents[i] = contents[i].split(",")
+      i+=1
+    end
+    split_contents.each do |value1, value2, value3|
+      [{id: value1.to_i, name: value2.to_s, done: value3}]
+     end
   else
-    []
+      []
   end
 end
 
@@ -28,6 +38,3 @@ save_tasks("tasks.txt", [
 
 tasks = load_tasks("tasks.txt")
 puts tasks
-x = []
-puts x
-puts x
