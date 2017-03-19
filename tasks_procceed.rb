@@ -16,7 +16,9 @@ def load_tasks(file_name)
     i = 0
     paragraphs = Array.new
     split_contents = Array.new
-    hashes = {}
+    arrays_hash = Array.new
+    resul =  Array.new
+    hashes = Hash.new
     contents = []
     File.foreach(file_name, "\n") do |paragraph|
       contents << paragraph.chomp
@@ -24,8 +26,9 @@ def load_tasks(file_name)
       i+=1
     end
     split_contents.each do |value1, value2, value3|
-      [{id: value1.to_i, name: value2.to_s, done: value3}]
+      resul = resul  + arrays_hash = [id: hashes[:id] = value1.to_i, name: hashes[:name] = value2, done: hashes[:done] = true?(value3)]
      end
+     resul
   else
       []
   end
@@ -36,5 +39,13 @@ save_tasks("tasks.txt", [
    {id: 2, name: "Lavar ropa", done: false}
  ])
 
-tasks = load_tasks("tasks.txt")
+def true?(obj)
+  if obj == "true"
+    true
+  else
+    false
+  end
+end
+
+tasks = load_tasks("tasks.tt")
 puts tasks

@@ -13,9 +13,6 @@ end
 def load_tasks(file_name)
   if File.file?(file_name)
     File.read(file_name)
-  #  p [Hash[*f.split(/,|\n/)]]
-  #  hash = {id: "", name: "", done: "" }
-  # Hash[File.read(file_name).split(",").map{|i| i.split("\n")}]
   else
     []
   end
