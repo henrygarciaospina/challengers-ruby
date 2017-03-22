@@ -13,8 +13,7 @@ class Car
 
   def brake(ammount=1)
     @velocity -= ammount
-    end
- end
+  end
 end
 
 class Bus < Car
