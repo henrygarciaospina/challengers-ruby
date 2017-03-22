@@ -1,5 +1,4 @@
 class Car
-  attr_accessor :acceleration, :braking
   attr_reader   :velocity
 
   def initialize
@@ -25,15 +24,6 @@ class Car
     end
  end
 
-
- #def show_velocity
-  #  @velocity
-# end
-
-#  private
-#      def velocity
-#        show_velocity
-#      end
 end
 
 car = Car.new
