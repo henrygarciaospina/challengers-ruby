@@ -24,13 +24,14 @@ class Car
     end
  end
 
-    def velocity
-      show_velocity
-    end
 
-    protected
-      def show_velocity
-        @velocity
+ def show_velocity
+    @velocity
+ end
+
+  private
+      def velocity
+        show_velocity
       end
 end
 
