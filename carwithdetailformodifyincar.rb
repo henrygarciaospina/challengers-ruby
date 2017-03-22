@@ -1,9 +1,8 @@
 class Car
-  attr_accessor :acceleration, :braking
-  attr_reader   :velocity
+  attr_accessor :acceleration, :braking, :velocity
 
-  def initialize
-    @velocity = 0
+  def initialize(velocity = 0)
+    @velocity = velocity
     @acceleration = 0
   end
 
@@ -26,24 +25,24 @@ class Car
  end
 
 
- #def show_velocity
-  #  @velocity
-# end
+ def show_velocity
+    @velocity
+ end
 
-#  private
-#      def velocity
-#        show_velocity
-#      end
+  private
+      def velocity
+        show_velocity
+      end
 end
 
 car = Car.new
-#p car.velocity = 10
+p car.velocity = 10
 p car.accelerate(66)
 p car.velocity
-p car.accelerate
-p car.accelerate
-p car.velocity
-p car.accelerate
-p car.brake
+#p car.accelerate
+#p car.accelerate
+#p car.velocity
+#p car.accelerate
+#p car.brake
 p car.brake(12)
 p car.velocity
