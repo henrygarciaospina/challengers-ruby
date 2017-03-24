@@ -47,3 +47,6 @@ c2 = Comment.new("Esto funciona a la perfección yeahhh")
 puts c2.num_words
 puts c2.num_chars
 puts "*" * 20
+c3 = Comment.new("")
+puts c3.num_words
+puts c3.num_chars
