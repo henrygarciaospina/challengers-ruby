@@ -1,7 +1,11 @@
-  def palindrome?(letters)
-    letters.downcase == letters.downcase.reverse
+class String
+  def palindrome?
+    letters = self.downcase.scan(/\w/)
+    letters == letters.reverse
   end
+end
 
-p palindrome?("OSO")
-p palindrome?("Ana")
-p palindrome?("henry")
+p ("OSO  ANA").palindrome?
+p ("Ana").palindrome?
+p ("henry").palindrome?
+p ("OJO").palindrome?
